@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "f24b8e7f-8f71-4d83-a9fd-e81d0f444a9f",
+		"name": "SpringBoot Active MQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Unique Session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8006/customer/session",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"customer",
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"description\":\"stuva\",\n\"price\":\"3.19\",\n\"imageUrl\":\"http://localhost:8080/product/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8006/product/sendMessage/create?sessionkey=402D33584F12DDA2AAB06978C5D4D1ED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"product",
+						"sendMessage",
+						"create"
+					],
+					"query": [
+						{
+							"key": "sessionkey",
+							"value": "402D33584F12DDA2AAB06978C5D4D1ED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products List ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8006/product/list?sessionkey=402D33584F12DDA2AAB06978C5D4D1ED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "sessionkey",
+							"value": "402D33584F12DDA2AAB06978C5D4D1ED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8006/product/sendMessage/delete/2?sessionkey=402D33584F12DDA2AAB06978C5D4D1ED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"product",
+						"sendMessage",
+						"delete",
+						"2"
+					],
+					"query": [
+						{
+							"key": "sessionkey",
+							"value": "402D33584F12DDA2AAB06978C5D4D1ED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Messae Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"description\":\"stuva update\",\n\"price\":\"3.19\",\n\"imageUrl\":\"http://localhost:8080/product/\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8006/product/sendMessage/update/1?sessionkey=58CFC34E3EF44995E444506A3D4F4BA6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"product",
+						"sendMessage",
+						"update",
+						"1"
+					],
+					"query": [
+						{
+							"key": "sessionkey",
+							"value": "58CFC34E3EF44995E444506A3D4F4BA6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8006/swagger-ui.html#/product-controller",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8006",
+					"path": [
+						"swagger-ui.html"
+					],
+					"hash": "/product-controller"
+				}
+			},
+			"response": []
+		}
+	]
+}
