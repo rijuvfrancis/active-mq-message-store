@@ -11,6 +11,7 @@ public class ActiveMqMessageStoreRestApiApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

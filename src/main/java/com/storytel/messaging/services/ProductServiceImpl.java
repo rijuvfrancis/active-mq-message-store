@@ -37,6 +37,10 @@ public class ProductServiceImpl implements ProductService {
 		this.jmsTemplate = jmsTemplate;
 	}
 
+	public ProductServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public List<Product> listAll() {
 		List<Product> products = new ArrayList<>();
@@ -82,13 +86,13 @@ public class ProductServiceImpl implements ProductService {
 	 * 
 	 */
 	public boolean validSession(String sessionkey, HttpServletRequest httpServletRequest) {
-		log.debug("sessionkey ::" + httpServletRequest.getRequestedSessionId());
+		log.info("sessionkey ::" + httpServletRequest.getRequestedSessionId());
 
 		if (httpServletRequest.getRequestedSessionId()!= null && httpServletRequest.getRequestedSessionId().equals(sessionkey)) {
 
 			return true;
 		}
-		log.debug("Invalid Session");
+		log.info("Invalid Session");
 		return false;
 	}
 }

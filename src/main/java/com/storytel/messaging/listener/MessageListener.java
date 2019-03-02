@@ -13,15 +13,14 @@ import com.storytel.messaging.domain.Product;
 import com.storytel.messaging.repositories.ProductRepository;
 import com.storytel.messaging.services.ProductService;
 
-
 /**
  * @author Riju
  *
  */
 
 /**
- * This is the queue listener class, its receiveMessage() method is invoked
- * with the message as the parameter.
+ * This is the queue listener class, its receiveMessage() method is invoked with
+ * the message as the parameter.
  */
 
 @Component
@@ -53,7 +52,7 @@ public class MessageListener {
 			productService.delete(id);
 			return;
 		}
-		
+
 		createOrUpdate(message, operation);
 
 		log.info("Message processed...");
@@ -74,10 +73,16 @@ public class MessageListener {
 			if (operation.equals("update")) {
 				Long id = Long.valueOf(message.get("id"));
 				productinmemorydb = productRepository.findById(id).orElse(null);
-				productpayload.setMessageCount(productinmemorydb.getMessageCount());
+
+				if (productinmemorydb == null) {
+					log.info("!!!! No Product found for  update with id !!!! " + id
+							+ " ??? can you pass the correct id ??");
+					return;
+				}
+				productpayload.setMessageCount(productpayload.getMessageCount());
 			}
 
-			//productService.saveOrUpdate(productpayload);
+			// productService.saveOrUpdate(productpayload);
 
 			productpayload.setMessageReceived(true);
 			productpayload.setMessageCount(productpayload.getMessageCount() + 1);

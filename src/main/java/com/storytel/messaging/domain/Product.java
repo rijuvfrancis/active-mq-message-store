@@ -9,7 +9,8 @@ import javax.persistence.Id;
 import com.google.gson.Gson;
 
 /**
- * Created by jt on 1/10/17.
+ * @author Riju
+ *
  */
 @Entity
 public class Product {
