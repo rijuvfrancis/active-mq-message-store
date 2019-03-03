@@ -43,10 +43,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"description\":\"stuva\",\n\"price\":\"3.19\",\n\"imageUrl\":\"http://localhost:8080/product/\"\n}"
+					"raw": "{\n\"description\":\"stuva\",\n\"price\":\"3.19\",\n\"imageUrl\":\"http://localhost:8080/product.img/\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8006/product/sendMessage/create?sessionkey=402D33584F12DDA2AAB06978C5D4D1ED",
+					"raw": "http://localhost:8006/product/sendMessage/create?sessionkey=08068AD258137565B8B1421CF1D51290",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -60,7 +60,7 @@
 					"query": [
 						{
 							"key": "sessionkey",
-							"value": "402D33584F12DDA2AAB06978C5D4D1ED"
+							"value": "08068AD258137565B8B1421CF1D51290"
 						}
 					]
 				}
