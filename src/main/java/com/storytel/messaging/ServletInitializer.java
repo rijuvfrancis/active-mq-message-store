@@ -9,7 +9,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  */
 
 /**
- * Required for Tomcat to detect as Spring boot application for hosting in AWS Elastic Bean Stalk.
+ * Required for Tomcat to detect Spring boot application for hosting in AWS Elastic Bean Stalk.
  * 
  */
 public class ServletInitializer extends SpringBootServletInitializer {
