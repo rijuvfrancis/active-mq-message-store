@@ -24,14 +24,13 @@ The following guides illustrates how to use certain features concretely:
 
 ### Rest Api
 * [Each client can send message for create,update ,Delete operations ,rest api endpoints are exposed for each services. Application additionally  
-  create,update and Delete a Product with id ,description based on the messages received and stores in 
-  message store which is an in memory database ]
+  create,update and Delete a Product with id ,description based on the messages received and stores in message store which is an in memory database ]
 * [Listing all products , it needs to be in this format]
   (eg : http://localhost:8006/product/list?sessionkey={sessionid})
-* [Create and Update methods available in the url]
+* [Create and Update methods exposed in the url]
    (http://localhost:8006/product/sendMessage/create?sessionkey={sessionid})
    (http://localhost:8006/product/sendMessage/update/1?sessionkey={sessionid})
-* [Delete method available in the url]
+* [Delete method exposed in the url]
   (http://localhost:8006/product/sendMessage/delete/2?sessionkey={sessionid})
 * [Logout to Invalidate session and delete all records](http://localhost:8006/customer/logout)
 
@@ -51,7 +50,7 @@ The following guides illustrates how to use certain features concretely:
 * [Test cases written for the Controller and Main class]
 
 ### Hosting
-* [Application also hosted in AWS EBS](http://storytel.us-east-2.elasticbeanstalk.com/swagger-ui.html#)
+* [Application also hosted in AWS EBS] - (http://storytel.us-east-2.elasticbeanstalk.com/swagger-ui.html#)
 * [Application also hosted in Kubernetes in IBM Cloud]()
 
 ### End
