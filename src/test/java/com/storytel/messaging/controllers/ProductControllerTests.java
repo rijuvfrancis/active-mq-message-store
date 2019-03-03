@@ -61,9 +61,10 @@ public class ProductControllerTests {
 		when(productController.indexProductUpdate(new Product(),"1", "update", "1", mockHttpServletRequest))
 						.thenCallRealMethod();
 	}
-	@Test
+	@Test(expected = ResourceNotFoundException.class)
 	public void listAllProducts() throws ResourceNotFoundException{
 		mockHttpServletRequest.setRequestedSessionId("1");
+		
 		List<Product> allProducts= productController.listAllProducts("1",mockHttpServletRequest);
 		assertThat(allProducts.isEmpty());
 	}
@@ -76,7 +77,7 @@ public class ProductControllerTests {
 	@Test
 	public void logoutSessionTest() {
 		assertThat(productController).isNotNull();
-		productController.logoutSession(mockHttpSession);
+		productController.logoutSession(mockHttpSession,mockHttpServletRequest);
 		assertTrue(mockHttpSession.isInvalid());
 	}
 }

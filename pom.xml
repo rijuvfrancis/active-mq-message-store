@@ -9,11 +9,22 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+
+	<profiles>
+		<profile>
+			<id>war</id>
+			<properties>
+				<packaging.type>war</packaging.type>
+			</properties>
+		</profile>
+	</profiles>
+
 	<groupId>com.storytel</groupId>
 	<artifactId>messaging</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>active-mq-message-store-rest-api</name>
 	<description>Active MQ implementation in Springboot</description>
+	<packaging>war</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -97,6 +108,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>active-mq-api</finalName>
 	</build>
-
 </project>

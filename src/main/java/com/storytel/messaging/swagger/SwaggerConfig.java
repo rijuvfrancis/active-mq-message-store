@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 
 public class SwaggerConfig {
-	public static final Contact DEFAULT_CONTACT = new Contact("Riju Francis", "http://localhost:8006/session",
+	public static final Contact DEFAULT_CONTACT = new Contact("Riju Francis", "http://storytel.us-east-2.elasticbeanstalk.com/swagger-ui.html#",
 			"rijuvfrancis@gmail.com");
 	public static final ApiInfo DEFAULT = new ApiInfo("ActiveMQ Api Documentation", "Api Documentation", "1.0",
 			"urn:tos", DEFAULT_CONTACT, "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
