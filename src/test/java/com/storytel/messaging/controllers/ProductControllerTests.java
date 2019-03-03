@@ -24,6 +24,10 @@ import com.storytel.messaging.repositories.ProductRepository;
 import com.storytel.messaging.services.ProductService;
 import com.storytel.messaging.services.ProductServiceImpl;
 
+/**
+ * @author Riju
+ *
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductControllerTests {

@@ -143,7 +143,7 @@ public class ProductController {
 	 * 
 	 */
 	@GetMapping("/customer/logout")
-	public void logoutSession(HttpSession session , HttpServletRequest httpServletRequest) {
+	public void logoutSession(HttpSession session, HttpServletRequest httpServletRequest) {
 		session.invalidate();
 		httpServletRequest.getSession().invalidate();
 		productService.deleteAll();
